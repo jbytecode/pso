@@ -48,6 +48,10 @@ class Particle {
     return _values;
   }
 
+  List<double> getBestValues(){
+    return _bestvalues;
+  }
+
   double getFitnessValue() {
     return _fitness;
   }

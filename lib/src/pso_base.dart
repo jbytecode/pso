@@ -16,6 +16,10 @@ class PSO {
     return result.deepCopy();
   }
 
+  List<Particle> getPopulation(){
+    return _population;
+  }
+
   PSO(FitnessFunctionType fitnessFunction, int popsize, List<double> mins,
       List<double> maxs) {
     _population = List<Particle>(popsize);
