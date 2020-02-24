@@ -1,3 +1,5 @@
+![Dart CI](https://github.com/jbytecode/pso/workflows/Dart%20CI/badge.svg)
+
 A Library for Particle Swarm Optimization
 
 Created by Matletik - Mathematical Manipulatives and Interactive Learning Tools
