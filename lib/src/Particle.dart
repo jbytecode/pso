@@ -5,16 +5,30 @@ import 'package:pso/src/Vector.dart';
 typedef double FitnessFunctionType(List<double> x);
 
 class Particle {
+  /// Holds the values of the candidate solution
   List<double> _values;
+  /// Velocity vector for changing values in all directions
   List<double> _velocity;
+  /// Keeps the best value that is ever reached
   List<double> _bestvalues;
+  /// Lower bounds of the random initial values
   List<double> _mins;
+  /// Upper bounds of the random initial values
   List<double> _maxs;
+  /// Current fitness value returned from the objective function
   double _fitness;
+  /// Best fitness ever reached by this [Particle]
   double _bestfitness;
+  /// A function that takes a List<double> and returns a double
+  /// This function is used to measure how current Particle is good
   FitnessFunctionType _FitnessFunctionType;
+  /// Randomization object
   Math.Random _random;
 
+  /// The constructor, [_mins] for lower bounds of each variable
+  /// [_maxs] for upper bounds of each variable
+  /// [_FitnessFunctionType] for calculating how the current [Particle] is good
+  /// at satisfying the objective function.
   Particle(List<double> mins, List<double> maxs,
       FitnessFunctionType fitnessFunction) {
     _random = Math.Random();
@@ -34,6 +48,7 @@ class Particle {
     _bestfitness = _fitness;
   }
 
+  /// Deep copies (clones) the current [Particle]. 
   Particle deepCopy() {
     Particle newp = Particle(_mins, _maxs, _FitnessFunctionType);
     newp._bestvalues = List.from(_bestvalues);
@@ -44,18 +59,26 @@ class Particle {
     return newp;
   }
 
+  /// Returns the current [_values]
   List<double> getValues() {
     return _values;
   }
 
+  /// Returns the best [_values] that ever reached.
   List<double> getBestValues(){
     return _bestvalues;
   }
 
+  /// Returns the current fitness
   double getFitnessValue() {
     return _fitness;
   }
 
+  /// Updates the current [Particle] using formulas:
+  /// velocity(t+1) = w * velocity(t) + r1 * c1 * (best - x) + r2 * c2 * (gbest * x)
+  /// x(t+1) = x(t) + velocity(t+1)
+  /// where best is the current [Particles] best value that is ever reached
+  /// gbest is the global best in the whole population
   void update(double w, double c1, double c2, Particle gbest) {
     double r1 = _random.nextDouble();
     double r2 = _random.nextDouble();
@@ -73,6 +96,7 @@ class Particle {
     }
   }
 
+  /// A string representation of the current [Particle]
   @override
   String toString() {
     return 'Particle{$_values, fitness: $_fitness}';
