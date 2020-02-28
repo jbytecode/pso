@@ -1,3 +1,7 @@
+## 1.0.2
+
+- Code documentation
+
 ## 1.0.1
 
 - getPopulation() in PSO returns the whole population.
