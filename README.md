@@ -2,9 +2,6 @@
 
 A Library for Particle Swarm Optimization
 
-Created by Matletik - Mathematical Manipulatives and Interactive Learning Tools
-
-http://www.matletik.com
 
 ## Usage
 
