@@ -1,11 +1,10 @@
 name: pso
 description: Particle Swarm Optimization tool for Dart. The implementation supposes the objective function is a maximation and optimization parameters are customizable.
-version: 1.0.2
+version: 1.0.3
 homepage: http://www.matletik.com
-author: Matletik - Mathematical Manipulatives and Interactive Learning Tools
 
 environment:
-  sdk: '>=2.0.0 <3.0.0'
+  sdk: '>=3.0.0 <4.0.0'
 
 #dependencies:
 #  path: ^1.6.0

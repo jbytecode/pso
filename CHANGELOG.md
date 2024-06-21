@@ -1,3 +1,8 @@
+## 1.0.3 
+
+- Migration to Dart 3.x.y
+
+
 ## 1.0.2
 
 - Code documentation
