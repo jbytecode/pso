@@ -4,7 +4,7 @@
 library pso;
 
 export 'src/pso_base.dart';
-export 'src/Vector.dart';
-export 'src/Particle.dart';
+export 'src/vector.dart';
+export 'src/particle.dart';
 
 // TODO: Export any libraries intended for clients of this package.

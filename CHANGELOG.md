@@ -1,3 +1,8 @@
+## 1.0.4 
+
+- Fix code for Dart standards
+
+
 ## 1.0.3 
 
 - Migration to Dart 3.x.y

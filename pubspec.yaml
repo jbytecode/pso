@@ -1,6 +1,6 @@
 name: pso
 description: Particle Swarm Optimization tool for Dart. The implementation supposes the objective function is a maximation and optimization parameters are customizable.
-version: 1.0.3
+version: 1.0.4
 homepage: https://github.com/jbytecode/pso
 
 environment:

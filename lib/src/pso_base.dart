@@ -1,4 +1,4 @@
-import 'Particle.dart';
+import 'particle.dart';
 
 class PSO {
   late List<Particle> _population;

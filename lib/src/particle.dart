@@ -1,6 +1,6 @@
 import 'dart:math' as _math;
 
-import 'package:pso/src/Vector.dart';
+import 'package:pso/src/vector.dart';
 
 typedef FitnessFunctionType = double Function(List<double> x);
 
